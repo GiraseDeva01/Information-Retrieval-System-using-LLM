@@ -1,6 +1,6 @@
 import streamlit as st
 from PyPDF2 import PdfReader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 import os
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 import google.generativeai as genai
@@ -95,7 +95,9 @@ def get_conversational_chain():
     the provided context, just say, "Answer is not available in the context." Don't provide an incorrect answer.
 
     Context:\n{context}\n
+
     Question:\n{question}\n
+
     Answer:
     """
     model = ChatGoogleGenerativeAI(model="gemini-1.5-flash-latest", temperature=0.3)
@@ -167,3 +169,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
