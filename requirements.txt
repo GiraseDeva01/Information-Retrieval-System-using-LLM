@@ -3,6 +3,7 @@ google-generativeai
 python-dotenv
 langchain
 langchain-text-splitters
+langchain-core
 PyPDF2
 chromadb
 faiss-cpu
